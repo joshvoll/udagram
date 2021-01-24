@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - 13
+
+service: 
+  - docker
+
+# pre-testing installs
+install:
+  - echo "nothing needs to be install it"
+
+# Scripts to be run such as tests
+  - echo "no tests"
+
+script:
+  - docker --version # print the version of docker
+  - docker build -t udagram-api-user .
+  - docker tag udagram-api-user joshvoll/udagram-api-user
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+  - docker push joshvoll/udagram-api-user
