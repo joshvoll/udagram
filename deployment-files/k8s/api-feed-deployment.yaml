@@ -15,7 +15,7 @@ spec:
         service: udagram-api-feed
     spec:
       containers:
-      - image: joshvoll/udagram-api-feed
+      - image: joshvoll/udagram-api-feed:latest
         name: udagram-api-feed
         imagePullPolicy: Always
         resources:
