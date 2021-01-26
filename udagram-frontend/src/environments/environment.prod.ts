@@ -5,8 +5,11 @@
 export const environment = {
   production: false,
   appName: 'Udagram',
-  apiHost: 'http://localhost:8080/api/v0'
+  apiHost:'http://ad284a817721d434d91d1465b7094fab-1327527670.us-east-2.elb.amazonaws.com:8080/api/v0'
 };
+
+// local api url to the local microservices
+//  apiHost: 'http://localhost:8080/api/v0'
 
 /*
  * For easier debugging in development mode, you can import the following file
